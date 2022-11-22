@@ -30,7 +30,8 @@ class Post(models.Model):
     #     ordering = ['-pub_date']
 
     def __str__(self):
-        return (f'Пост "{self.text[:100]}..." автора {self.author.username} от {self.pub_date}')
+        return (f'Пост "{self.text[:100]}..."'
+                f'автора {self.author.username} от {self.pub_date}')
 
 
 class Comment(models.Model):
